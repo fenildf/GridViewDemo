@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="none"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <yinlei.mygridview.widget.MyGridView
+                android:id="@+id/gv_bookshelf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="3dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:numColumns="3"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:stretchMode="columnWidth"></yinlei.mygridview.widget.MyGridView>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/shelf_delete_share"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#75CBEF">
+
+                <TextView
+                    android:id="@+id/tv_delete_shelf"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="#75CBEF"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="clickButton"
+                    android:text="删除"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:id="@+id/tv_share_shelf"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="#75CBEF"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="clickButton"
+                    android:text="分享"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
